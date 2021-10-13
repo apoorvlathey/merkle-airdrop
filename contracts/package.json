@@ -12,7 +12,9 @@
     "etherscan-verify:polygon": "hardhat --network polygon etherscan-verify"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.2.0"
+    "@openzeppelin/contracts": "^4.2.0",
+    "keccak256": "^1.0.3",
+    "merkletreejs": "^0.2.24"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
