@@ -78,8 +78,8 @@ describe("MerkleAirdropDistributor", () => {
     for (var i = 0; i < snapshotData.length; i++) {
       merkleTrees.push(
         new MerkleTree(
-          Object.entries(snapshotData[i]).map(([_token, _amount]) =>
-            getNodeLeaf(i, airdropTokens[i].address, _token, _amount)
+          Object.entries(snapshotData[i]).map(([_user, _amount]) =>
+            getNodeLeaf(i, airdropTokens[i].address, _user, _amount)
           ),
           keccak256,
           { sortPairs: true }

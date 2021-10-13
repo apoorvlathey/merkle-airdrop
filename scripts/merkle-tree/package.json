@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.1",
+    "ethers": "^5.4.7",
+    "keccak256": "^1.0.3",
+    "merkletreejs": "^0.2.24",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}
