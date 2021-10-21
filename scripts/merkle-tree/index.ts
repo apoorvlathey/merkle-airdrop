@@ -98,10 +98,12 @@ const main = () => {
   let output: {
     root: string;
     token: string;
+    totalTokensToAirdropInWei: string;
     userData: UserData;
   } = {
     root: merkleTree.getHexRoot(),
     token: tokenAddress,
+    totalTokensToAirdropInWei: totalTokensToAirdrop.toString(),
     userData,
   };
 
