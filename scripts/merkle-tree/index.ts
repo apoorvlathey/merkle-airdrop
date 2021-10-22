@@ -50,8 +50,10 @@ interface UserData {
 }
 
 const main = () => {
-  const airdropIndex = 0;
-  const tokenAddress = "0x0000000000000000000000000000000000000000";
+  const airdropIndex = 3;
+  const tokenAddress = "0x7eB344a90a09999515097adc049a629d769CD0b8";
+  const tokenSymbol = "MOCK";
+  const tokenImg = "/images/tokens/matic.png";
   const totalTokensToAirdrop = new BN(parseEther("100000").toString());
 
   const totalSupply = getTotalSupply();
@@ -97,13 +99,19 @@ const main = () => {
 
   let output: {
     root: string;
+    airdropIndex: number;
     token: string;
+    tokenSymbol: string;
+    tokenImg: string;
     totalTokensToAirdropInWei: string;
     userData: UserData;
   } = {
     root: merkleTree.getHexRoot(),
+    airdropIndex,
     token: tokenAddress,
-    totalTokensToAirdropInWei: totalTokensToAirdrop.toString(),
+    tokenSymbol,
+    tokenImg,
+    totalTokensToAirdropInWei: totalTokensToAirdrop.toFixed(),
     userData,
   };
 
