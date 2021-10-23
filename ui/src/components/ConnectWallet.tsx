@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Portis from "@portis/web3";
+import Fortmatic from "fortmatic";
+import Torus from "@toruslabs/torus-embed";
 import { ethers } from "ethers";
 import {
   Button,
@@ -15,7 +19,29 @@ import {
 } from "@chakra-ui/react";
 import { setProvider } from "../types";
 
-const providerOptions = {};
+const providerOptions = {
+  walletconnect: {
+    package: WalletConnectProvider, // required
+    options: {
+      infuraId: process.env.REACT_APP_INFURA_ID, // required
+    },
+  },
+  portis: {
+    package: Portis, // required
+    options: {
+      id: process.env.REACT_APP_PORTIS_ID, // required
+    },
+  },
+  fortmatic: {
+    package: Fortmatic, // required
+    options: {
+      key: process.env.REACT_APP_FORTMATIC_KEY, // required
+    },
+  },
+  torus: {
+    package: Torus, // required
+  },
+};
 const web3Modal = new Web3Modal({
   network: "rinkeby", // optional
   cacheProvider: false, // optional
