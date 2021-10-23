@@ -12,7 +12,6 @@ import { formatEther } from "@ethersproject/units";
 import { UserData } from "../types";
 
 interface AirdropCardProps {
-  airdropIndex: number;
   tokenSymbol: string;
   tokenImg: string;
   totalTokensToAirdropInWei: string;
@@ -21,7 +20,6 @@ interface AirdropCardProps {
 }
 
 function AirdropCard({
-  airdropIndex,
   tokenSymbol,
   tokenImg,
   totalTokensToAirdropInWei,
@@ -32,6 +30,7 @@ function AirdropCard({
     <VStack
       border="1px solid black"
       minW="40rem"
+      mb="2rem"
       px="1rem"
       py="1rem"
       rounded="lg"
@@ -56,7 +55,7 @@ function AirdropCard({
         </Flex>
       </HStack>
       <Center pt="1rem">
-        <Button onClick={() => onClickClaim()}>
+        <Button onClick={() => onClickClaim()} colorScheme="linkedin">
           Claim {userData.airdropAmount} {tokenSymbol}
         </Button>
       </Center>

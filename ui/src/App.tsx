@@ -103,7 +103,6 @@ function App() {
                 {signerAirdrops?.map((airdrop, i) => (
                   <AirdropCard
                     key={i}
-                    airdropIndex={airdrop.airdropIndex}
                     tokenSymbol={airdrop.tokenSymbol}
                     tokenImg={airdrop.tokenImg}
                     totalTokensToAirdropInWei={
